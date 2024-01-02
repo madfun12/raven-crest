@@ -4,12 +4,9 @@ import { redirect } from "next/navigation";
 export default function Home({ params }: { params: any }) {
     const invitation = decodeURIComponent(params.invitation);
 
-    console.log(invitation);
     const invitee = invitees.find(
         (person: { url: string }) => person.url === invitation
     );
-
-    console.log(invitee);
 
     if (!invitee) {
         redirect("/");
