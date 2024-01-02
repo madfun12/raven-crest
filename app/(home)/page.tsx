@@ -3,7 +3,7 @@ import Image from "next/image";
 export default function Home() {
     return (
         <main className="flex items-center justify-center p-8">
-            <h1 className="text-5xl">Attendees</h1>
+            <h1 className="text-5xl">Attendees go here</h1>
         </main>
     );
 }
