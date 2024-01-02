@@ -5,7 +5,7 @@ export default function Home({ params }: { params: any }) {
     const invitation = decodeURIComponent(params.invitation);
 
     const invitee = invitees.find(
-        (person: { url: string }) => person.url === invitation
+        (person: { id: string }) => person.id === invitation
     );
 
     if (!invitee) {
@@ -46,8 +46,7 @@ export default function Home({ params }: { params: any }) {
             {!invitee.murderer && (
                 <p className="text-2xl my-4">
                     You can read more about your character and the others
-                    invited in the biographies section. See you
-                    https://assets.eflorist.com/themes/custom-templates/7/75411691/videos/everyday_portrait.mp4
+                    invited in the biographies section. See you then.
                 </p>
             )}
         </main>
