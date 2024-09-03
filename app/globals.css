@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url("https://use.typekit.net/eet3xfm.css");
-
 :root {
     --foreground-rgb: 255, 255, 255;
     --background-start-rgb: 0, 0, 0;
@@ -11,15 +9,12 @@
 }
 
 body {
-    color: #000;
-    background: #dfd8b7;
-    font-family: "miller-display", serif;
+    color: #ffffff;
+    background: #000000;
+    background-repeat: no-repeat;
+    background-size: cover;
     font-weight: 400;
     font-style: normal;
 }
 
-.text-cursive {
-    font-family: "emily-austin", cursive;
-    font-weight: 400;
-    font-style: normal;
-}
+
