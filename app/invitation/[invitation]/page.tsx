@@ -15,13 +15,11 @@ export default function Home({ params }: { params: any }) {
         (person: { id: string }) => person.id === invitation
     );
 
-    const updateTime = () => {};
-
     useEffect(() => {
         setInterval(() => {
             const now = new Date();
             const tDate = new Date("2024-09-14");
-            const difference: any = tDate - now;
+            const difference = tDate.getTime() - now.getTime();
             const days = Math.floor(difference / (1000 * 60 * 60 * 24));
             const hours = Math.floor(
                 (difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
@@ -48,7 +46,7 @@ export default function Home({ params }: { params: any }) {
     return (
         <main className="p-8 max-w-[800px] m-auto">
             {today < targetDate && (
-                <div className="text-6xl text-center">{time}</div>
+                <div className="text-5xl text-center w-fit m-auto">{time}</div>
             )}
             {today > targetDate && <Typewriter invitee={invitee} />}
         </main>
