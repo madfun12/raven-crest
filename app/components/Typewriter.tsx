@@ -5,7 +5,6 @@ import { useEffect, useState } from "react";
 interface TyperwriterProps {
     invitee: {
         name: string;
-        murderer: boolean;
     };
 }
 
