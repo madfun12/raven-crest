@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { IBM_Plex_Mono } from "next/font/google";
 import "./globals.css";
 import Head from "next/head";
+import { Toaster } from "react-hot-toast";
 
 const plexMono = IBM_Plex_Mono({
     weight: "400",
@@ -28,7 +29,20 @@ export default function RootLayout({
                 ></link>
             </Head>
 
-            <body className={plexMono.className}>{children}</body>
+            <body className={plexMono.className}>
+                <Toaster
+                    toastOptions={{
+                        className: "",
+                        style: {
+                            border: "1px solid #fff",
+                            padding: "16px",
+                            color: "#fff",
+                            backgroundColor: "#000",
+                        },
+                    }}
+                />
+                {children}
+            </body>
         </html>
     );
 }
