@@ -28,7 +28,7 @@ export default function Home({ params }: { params: { id: string } }) {
     }
 
     return (
-        <main className="p-8 max-w-[800px] m-auto">
+        <main className="p-8 max-w-[800px] m-auto ">
             {invitee && <Typewriter invitee={invitee} />}
         </main>
     );
