@@ -3,16 +3,17 @@
 import { attendees } from "@prisma/client";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import toast from "react-hot-toast";
 
 export default function Home() {
     const [attendees, setAttendees] = useState<attendees[]>([]);
-    console.log(attendees);
 
     const getAttendees = async () => {
         try {
             const response = await axios.get("/api/attendees");
             setAttendees(response.data);
         } catch (error) {
+            toast.error('Error retrieving attendees')
             console.log(error);
         }
     };
