@@ -7,7 +7,6 @@ import toast from "react-hot-toast";
 
 export default function Home() {
     const [attendees, setAttendees] = useState<attendees[]>([]);
-    // why does this make the page work
     const getAttendees = async () => {
         try {
             const response = await axios.get("/api/attendees");
